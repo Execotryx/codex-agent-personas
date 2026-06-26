@@ -1,0 +1,13 @@
+# Ignore everything by default.
+*
+
+# Keep this ignore policy visible.
+!*.gitignore
+
+# Keep agent definitions.
+!*.toml
+
+# Keep repository documentation.
+!README.md
+!docs/
+!docs/*.md
