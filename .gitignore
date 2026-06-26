@@ -8,6 +8,7 @@
 !*.toml
 
 # Keep repository documentation.
+!AGENTS.md
 !README.md
 !docs/
 !docs/*.md
