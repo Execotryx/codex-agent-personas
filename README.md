@@ -76,23 +76,23 @@ The migrated files explicitly note that Codex custom-agent TOML does not provide
 
 ## Agent catalog
 
-| File | Agent name | Model | Effort | Sandbox | Purpose |
-|---|---|---:|---|---|---|
-| `agent-optimizer.toml` | `agent_optimizer` | `gpt-5.4` | high | workspace-write | Optimize a single GitHub Copilot `.agent.md` profile for token use, model fit, staging, tool alignment, and documentation-backed identifier checks. |
-| `claude-code-porter.toml` | `claude_code_porter` | `gpt-5.4` | high | workspace-write | Port GitHub Copilot custom agents to functionally equivalent Claude Code artifacts. |
-| `domain-knowledge-verifier.toml` | `domain_knowledge_verifier` | `gpt-5.4` | medium | read-only | Verify domain-specific claims, exact identifiers, and version-sensitive terminology against authoritative current sources. |
-| `implementation-planner.toml` | `implementation_planner` | `gpt-5.4` | medium | read-only | Convert validated investigation or review findings into a staged implementation plan for a follow-on executor. |
-| `model-adaptation-advisor.toml` | `model_adaptation_advisor` | `gpt-5.4` | medium | read-only | Research a target LLM and produce prompt-engineering directives for adapting an agent to that model. |
-| `model-selection-advisor.toml` | `model_selection_advisor` | `gpt-5.4` | high | read-only | Recommend a best-fit model for an agent from current official model, pricing, capability, and availability sources. |
-| `object-detection-kaggle-gpu-stabilizer.toml` | `object_detection_kaggle_gpu_stabilizer` | inherits | high | workspace-write | Generate, repair, or stabilize PyTorch object-detection workflows for constrained Kaggle or Colab GPU runtimes. |
-| `optimize.toml` | `optimize` | `gpt-5.4` | medium | read-only | Produce a read-only performance optimization plan for changed files after profiling confirmed bottlenecks. |
-| `performance-optimizer.toml` | `performance_optimizer` | inherits | high | workspace-write | Apply strict memory, speed, dependency, bundle-size, and startup-time optimization to provided code. |
-| `performance-profiler.toml` | `performance_profiler` | `gpt-5.3-codex` | medium | read-only | Perform static performance profiling, with deepest heuristics for JS, TS, and React, without editing files. |
-| `pipeline-optimizer.toml` | `pipeline_optimizer` | `gpt-5.4` | high | workspace-write | Audit and optimize a fleet or pipeline of GitHub Copilot custom agents, focusing on handoff and capability consistency. |
-| `progressive-refactor-tech-lead.toml` | `progressive_refactor_tech_lead` | `gpt-5.4-mini` | medium | workspace-write | Apply a three-stage correctness, structure, and performance refactor while preserving behavior. |
-| `pytorch-multi-hardware-scaffold.toml` | `pytorch_multi_hardware_scaffold` | `gpt-5.4` | high | workspace-write | Scaffold typed PyTorch projects for GPU, TPU, TT-Forge/Tenstorrent, and CPU runtimes. |
-| `root-cause-investigator.toml` | `root_cause_investigator` | `gpt-5.4` | high | read-only | Investigate bugs read-only, rank hypotheses, identify root cause, and produce a safe fix strategy. |
-| `tt-forge-pipeline-architect.toml` | `tt_forge_pipeline_architect` | `gpt-5.4` | high | workspace-write | Generate or repair TT-Forge / TT-XLA phase pipelines from inspected PyTorch model, dataset, and checkpoint artifacts. |
+| File                                            | Agent name                                 |             Model | Effort | Sandbox         | Purpose                                                                                                                                              |
+| ----------------------------------------------- | ------------------------------------------ | ----------------: | ------ | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `agent-optimizer.toml`                        | `agent_optimizer`                        |       `gpt-5.4` | high   | workspace-write | Optimize a single GitHub Copilot`.agent.md` profile for token use, model fit, staging, tool alignment, and documentation-backed identifier checks. |
+| `claude-code-porter.toml`                     | `claude_code_porter`                     |       `gpt-5.4` | high   | workspace-write | Port GitHub Copilot custom agents to functionally equivalent Claude Code artifacts.                                                                  |
+| `domain-knowledge-verifier.toml`              | `domain_knowledge_verifier`              |       `gpt-5.4` | medium | read-only       | Verify domain-specific claims, exact identifiers, and version-sensitive terminology against authoritative current sources.                           |
+| `implementation-planner.toml`                 | `implementation_planner`                 |       `gpt-5.4` | medium | read-only       | Convert validated investigation or review findings into a staged implementation plan for a follow-on executor.                                       |
+| `model-adaptation-advisor.toml`               | `model_adaptation_advisor`               |       `gpt-5.4` | medium | read-only       | Research a target LLM and produce prompt-engineering directives for adapting an agent to that model.                                                 |
+| `model-selection-advisor.toml`                | `model_selection_advisor`                |       `gpt-5.4` | high   | read-only       | Recommend a best-fit model for an agent from current official model, pricing, capability, and availability sources.                                  |
+| `object-detection-kaggle-gpu-stabilizer.toml` | `object_detection_kaggle_gpu_stabilizer` |          inherits | high   | workspace-write | Generate, repair, or stabilize PyTorch object-detection workflows for constrained Kaggle or Colab GPU runtimes.                                      |
+| `optimize.toml`                               | `optimize`                               |       `gpt-5.4` | medium | read-only       | Produce a read-only performance optimization plan for changed files after profiling confirmed bottlenecks.                                           |
+| `performance-optimizer.toml`                  | `performance_optimizer`                  |          inherits | high   | workspace-write | Apply strict memory, speed, dependency, bundle-size, and startup-time optimization to provided code.                                                 |
+| `performance-profiler.toml`                   | `performance_profiler`                   | `gpt-5.3-codex` | medium | read-only       | Perform static performance profiling, with deepest heuristics for JS, TS, and React, without editing files.                                          |
+| `pipeline-optimizer.toml`                     | `pipeline_optimizer`                     |       `gpt-5.4` | high   | workspace-write | Audit and optimize a fleet or pipeline of GitHub Copilot custom agents, focusing on handoff and capability consistency.                              |
+| `progressive-refactor-tech-lead.toml`         | `progressive_refactor_tech_lead`         |  `gpt-5.4-mini` | medium | workspace-write | Apply a three-stage correctness, structure, and performance refactor while preserving behavior.                                                      |
+| `pytorch-multi-hardware-scaffold.toml`        | `pytorch_multi_hardware_scaffold`        |       `gpt-5.4` | high   | workspace-write | Scaffold typed PyTorch projects for GPU, TPU, TT-Forge/Tenstorrent, and CPU runtimes.                                                                |
+| `root-cause-investigator.toml`                | `root_cause_investigator`                |       `gpt-5.4` | high   | read-only       | Investigate bugs read-only, rank hypotheses, identify root cause, and produce a safe fix strategy.                                                   |
+| `tt-forge-pipeline-architect.toml`            | `tt_forge_pipeline_architect`            |       `gpt-5.4` | high   | workspace-write | Generate or repair TT-Forge / TT-XLA phase pipelines from inspected PyTorch model, dataset, and checkpoint artifacts.                                |
 
 ## Agent groups
 
@@ -127,17 +127,17 @@ The migrated files explicitly note that Codex custom-agent TOML does not provide
 
 The following relationships are declared inside the migrated metadata and original instructions.
 
-| Caller | Declared callees or handoff targets |
-|---|---|
-| `agent_optimizer` | `domain_knowledge_verifier`, `model_adaptation_advisor` |
-| `claude_code_porter` | `model_selection_advisor` |
-| `implementation_planner` | `root_cause_investigator`, `progressive_refactor_tech_lead` |
+| Caller                                     | Declared callees or handoff targets                                             |
+| ------------------------------------------ | ------------------------------------------------------------------------------- |
+| `agent_optimizer`                        | `domain_knowledge_verifier`, `model_adaptation_advisor`                     |
+| `claude_code_porter`                     | `model_selection_advisor`                                                     |
+| `implementation_planner`                 | `root_cause_investigator`, `progressive_refactor_tech_lead`                 |
 | `object_detection_kaggle_gpu_stabilizer` | `progressive_refactor_tech_lead`, `optimize`, `domain_knowledge_verifier` |
-| `optimize` | `performance_profiler`, `implementation_planner` |
-| `pipeline_optimizer` | `agent_optimizer` |
-| `pytorch_multi_hardware_scaffold` | `progressive_refactor_tech_lead`, `optimize`, `domain_knowledge_verifier` |
-| `root_cause_investigator` | `implementation_planner` |
-| `tt_forge_pipeline_architect` | `progressive_refactor_tech_lead`, `domain_knowledge_verifier` |
+| `optimize`                               | `performance_profiler`, `implementation_planner`                            |
+| `pipeline_optimizer`                     | `agent_optimizer`                                                             |
+| `pytorch_multi_hardware_scaffold`        | `progressive_refactor_tech_lead`, `optimize`, `domain_knowledge_verifier` |
+| `root_cause_investigator`                | `implementation_planner`                                                      |
+| `tt_forge_pipeline_architect`            | `progressive_refactor_tech_lead`, `domain_knowledge_verifier`               |
 
 Agents not listed as callers either declare no callable agents or do not have a declared source handoff in the inspected metadata.
 
